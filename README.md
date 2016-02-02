@@ -6,3 +6,4 @@ The fritz-speed scripts query the TR-064 interface of a Fritz!Box using the
 uses [RRDtool](http://oss.oetiker.ch/rrdtool/) to collect, aggregate and graph
 the data.
 
+Full documentation can be found on [read the docs](https://fritz-speed.readthedocs.org/).
