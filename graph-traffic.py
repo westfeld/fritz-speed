@@ -12,7 +12,7 @@ import rrdtool
 from common import read_configuration
 
 def main():
-    prefs = read_configuration('fritz-speed.ini')
+    prefs = read_configuration(os.path.join(os.path.dirname(__file__),'fritz-speed.ini'))
     for g in prefs['graphs']:
         # graph the data for information about parameters see https://oss.oetiker.ch/rrdtool/doc/rrdgraph.en.html
         rrdtool.graph(g['filename'],
