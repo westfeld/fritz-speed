@@ -69,9 +69,6 @@ An example of a typical ``fritz-speed.ini`` file is shown here::
     graph_width: 500
     graph_basedir: /var/www/htdocs/pics
 
-    # maximum transferrate in Bytes/s which will be accepted as a valid value
-    max_transferrate: 150000000
-
     # definitions of graphs to be plotted
     # each section corresponds to one graph
     [day]
@@ -104,6 +101,12 @@ An example of a typical ``fritz-speed.ini`` file is shown here::
 To create the empty archive simply run the following script::
 
   ./create-rra.py
+
+During this setup step the maximum up- and downlink speed is queried from the
+router and set as the maximum valid value in the archive (an error margin of 10%
+is added to the determined value). This setting is important because if the
+router's transferred bytes counter is reset this would otherwise lead to a spike
+in the traffic graph.
 
 5. Running as a Cronjob
 -----------------------
