@@ -1,10 +1,11 @@
 [DEFAULT]
-rra_filename: /usr/local/fritzspeed/wan_traffic.rra
+rra_filename: /var/rrdtool/wan_traffic.rra
 graph_height: 300
-graph_width: 800
-graph_basedir: /var/www/fritzspeed
+graph_width: 500
+graph_basedir: /var/www/htdocs/pics
+# graph type for up/downstream: LINEx (where x = line width), AREA
 graph_type_up: LINE1
-graph_type_down: AREA
+graph_type_down: LINE1
 
 # definitions of graphs to be plotted
 # each section corresponds to one graph
@@ -31,3 +32,4 @@ interval: 2592000
 title: Traffic of last month
 # filename of plot
 filename: %(graph_basedir)s/traffic_1m.png
+
