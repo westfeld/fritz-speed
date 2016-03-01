@@ -51,6 +51,9 @@ Configuration basically means setting the location of the round robin archive
 (rra) file in which the data is stored. In addition the properties and location
 of the individual graphs have to be defined.
 
+The first step is to copy the example configuration file ``fritz-speed.ini.example``
+to ``fritz-speed.ini`` to enable further updates easily.
+
 Starting from the default ``fritz-speed.ini`` file typically only two variables
 have to be edited: ``rra_filename`` which defines the round robin archive
 filename in which the traffic data is stored and ``graph_basedir`` which is the
@@ -68,6 +71,14 @@ An example of a typical ``fritz-speed.ini`` file is shown here::
     graph_height: 300
     graph_width: 500
     graph_basedir: /var/www/htdocs/pics
+    # graph type for up/downstream: LINEx (where x = line width), AREA
+    # more information about plotting
+    # https://oss.oetiker.ch/rrdtool/doc/rrdgraph_graph.en.html
+    graph_type_up: LINE1
+    graph_type_down: LINE1
+    # graph color for up/downstream in RGB from 00 to FF in 000000 format
+    graph_color_up: ff0000
+    graph_color_down: 0000ff
 
     # definitions of graphs to be plotted
     # each section corresponds to one graph
