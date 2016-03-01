@@ -4,6 +4,8 @@ graph_height: 300
 graph_width: 500
 graph_basedir: /var/www/htdocs/pics
 # graph type for up/downstream: LINEx (where x = line width), AREA
+# more information about plotting
+# https://oss.oetiker.ch/rrdtool/doc/rrdgraph_graph.en.html
 graph_type_up: LINE1
 graph_type_down: LINE1
 
