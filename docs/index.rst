@@ -40,6 +40,7 @@ Contents
    :maxdepth: 2
 
    installation
+   changelog
    license
 
 
