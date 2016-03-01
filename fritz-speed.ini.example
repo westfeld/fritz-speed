@@ -8,6 +8,10 @@ graph_basedir: /var/www/htdocs/pics
 # https://oss.oetiker.ch/rrdtool/doc/rrdgraph_graph.en.html
 graph_type_up: LINE1
 graph_type_down: LINE1
+# graph color for up/downstream in RGB from 00 to FF in 000000 format
+graph_color_up: ff0000
+graph_color_down: 0000ff
+
 
 # definitions of graphs to be plotted
 # each section corresponds to one graph

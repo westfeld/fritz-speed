@@ -22,8 +22,8 @@ def main():
             "-s", "end-"+g['interval']+"s",
             "DEF:bytes-up="+g['rra_filename']+":bytes-up:AVERAGE",
             "DEF:bytes-down="+g['rra_filename']+":bytes-down:AVERAGE",
-            prefs['graph_type_down']+":bytes-down#0000ff:Downloadrate",
-            prefs['graph_type_up']+":bytes-up#ff0000:Uploadrate",
+            prefs['graph_type_down']+":bytes-down#"+prefs['graph_color_down']+":Downloadrate",
+            prefs['graph_type_up']+":bytes-up#"+prefs['graph_color_up']+":Uploadrate",
             "-v", "Transfer rate [B/s]")
 
 if __name__ == '__main__':
